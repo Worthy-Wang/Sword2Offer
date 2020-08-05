@@ -18,16 +18,23 @@
 using namespace std;
 
 /*
-begin:  
-end:    
-Time Complexity:
-Space Complexity:
-Method:
+begin:  11:13
+end:    11:55
+Time Complexity:    O(1)
+Space Complexity:   O(1)
+Method: 巧妙利用位运算的方法
 */
 
+class Solution {
+public:
+    int sumNums(int n) {
+        n && (n += sumNums(n-1));
+        return n;
+    }
+};
 
 int main()
 {
-   
+
    return 0;
 }

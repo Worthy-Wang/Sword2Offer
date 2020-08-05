@@ -18,13 +18,21 @@
 using namespace std;
 
 /*
-begin:  
-end:    
-Time Complexity:
-Space Complexity:
-Method:
+begin:  9:58
+end:    10:44
+Time Complexity:    O(N)
+Space Complexity:   O(1)
+Method: 经典约瑟夫问题，通过只剩一个存活的人的位置开始反推
 */
-
+class Solution {
+public:
+    int lastRemaining(int n, int m) {
+        int livepos = 0;
+        for (int i = 2; i <= n; i++)
+            livepos = (livepos + m) % i;
+        return livepos;
+    }
+};
 
 int main()
 {
